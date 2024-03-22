@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deepsort"
+description = "DeepSort implementation based on https://github.com/nwojke/deep_sort"
+readme = "README.md"
+requires-python = ">=3.7"
+license = "GPL-3.0"
+authors = [
+  { name = "Mohammad Wasil", email = "mwasil@outlook.co.id" },
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "scipy",
+    "scikit-learn"
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://github.com/lantiplitmus/deepsort"
+Issues = "https://github.com/lantiplitmus/deepsort/issues"
+Source = "https://github.com/lantiplitmus/deepsort"
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "hatchling"
+]
+
+[tool.hatch.version]
+path = "deepsort/__version__.py"
